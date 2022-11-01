@@ -17,13 +17,13 @@
         };
 
         let urls = [
-            'https://api.github.com/users/iliakan',
-            'https://api.github.com/users/remy',
+            'https://api.github.com/users/crguezl',
+            'https://api.github.com/users/alu0101102726',
             'https://no-such-url'
         ];
 
         PromiseAllSettled(urls.map(url => fetch(url)))
-            .then(results => { // (*)
+            .then(results => { 
                 results.forEach((result, num) => {
                     if (result.status == "fulfilled") {
                         console.log(`${urls[num]}: ${result.value.status}`);
